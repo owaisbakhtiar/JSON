@@ -1,28 +1,18 @@
-import SwitchSelector from "react-native-switch-selector";
 import React, {useState} from "react";
-import Colors from "../constants/Colors";
-import {TextInput} from "react-native-paper";
+import { StyleSheet, Text, View} from "react-native";
 
-import {Modal, StyleSheet, Text, TouchableHighlight, View} from "react-native";
+const CurrencyConverter = () => {
 
-
-    return (
-        <View>
-            
-             <Text style={{fontSize: 18}}>
-                            Currency converter
-                        </Text>
-
-
-                </View>
-  
-        </View>
+  return (
+    <View>
+      <Text style={{fontSize: 18}}>
+        Currency converter
+      </Text>
+    </View>
     );
 };
 
-const styles = StyleSheet.create({
-    
-    
+const styles = StyleSheet.create({  
 });
 
 export default CurrencyConverter;

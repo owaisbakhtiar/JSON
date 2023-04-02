@@ -1,36 +1,17 @@
 # JSON
 To open file, yarn then yarn start.
 
-NOTE: My JSON files are located in a folder named data. They use information from folder named models.
+NOTE: My JSON files are located in a folder named data. They use information from a folder named models.
    This layout for JSON files is based on an Academind tutorial (React Native-Practical Guide) by Max Schwarzuller.
    
-Here is what I would like to learn.
 1: screens/CategoriesScreen.
+NOTE: I am just beginning to learn to pass parameters and props.
   I have a horizontal flatlist that returns CATEGORIESINFO using components/InfoCard.
-    I want to click on each circle and pass information from dummy-info-data/INFO (title & imageUrl) to screens/InfoDetailScreen,
-  but I cannot learn how. I am only able to pass the id. I have tried options from a dozen tutorials with no luck.
+    I want to click on each circle and pass imageUrl and title from dummy-info-data/INFO to screens/InfoDetailScreen,
+  but I cannot get this to work. I am able to pass catId, but nothing else. Not sure what I am doing wrong.
   
-2: When you click on the vertical flatlist (example: Dining) it will open a subCategory with dining options. I also want
-  this screen to open a horizontal flatlist with additional (and different) info items that can be clicked to opn in screens/InfoDetailScreen.
+2: When you click on the main vertical flatlist (example: Dining) it will open a sub Category. I also want this to open a horizontal flatlist at the top like in the step above. I think this data needs to be part of the JSON for each sub-category (example: Dining would also have the information for the circle items in horizontal flatlist——Attractions would have the circle items for that horizontal flatlist.
   I have not worked on this yet. I am trying to decide if this will take a new JSON or if the information can be added to the business-data file.
   
 3: I successfully built the props going from CategoriesScreen to SubCategoriesScreen to BusinessListScreen and finally BusinessDetailScreen,
   but I have tried to build it again and I cannot do it. My big problem is that I do not completely understand how to pass and receive the props.
-  
-  I would like to learn how the code works. Examples:
-  
-  CategoriesScreen, line 17: categoryId: itemData.item.id .
-      Is categoryId something I can create/change, or is it a javascript word?
-      Is itemData something I can create/change, or is it a javascript word?
-      I have seen some tutorials that use only item (not itemData). Why is this?
-      
-  SubCategoriesScreen, line 12: const catId = route.params.categoryId; .
-      This is receiving the prop categoryId from CategoriesScreen. The word catId can be changed...Correct?
-      
-  SubCategoriesScreen, lines 15-17: const displaySubCategories = SUBCATEGORIES.filter((catItem) => {return catItem.subCategoryIds.indexOf(catId) >= 0;}); .
-       I do not understand any of this. Where did the word catItem come from? Where did the word subCategoryIds (or sometimes categoryIds) come from?       
-       Line 20 is also confusing.
-       
-  InfoDetailScreen. See #1, above.
-  
-  Passing information from horizontal flatlist. See #2, above.

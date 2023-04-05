@@ -1,17 +1,22 @@
 # JSON
 To open file, yarn then yarn start.
 
-NOTE: My JSON files are located in a folder named data. They use information from a folder named models.
-   This layout for JSON files is based on an Academind tutorial (React Native-Practical Guide) by Max Schwarzuller.
-   
-1: screens/CategoriesScreen.
-NOTE: I am just beginning to learn to pass parameters and props.
-  I have a horizontal flatlist that returns CATEGORIESINFO using components/InfoCard.
-    I want to click on each circle and pass imageUrl and title from dummy-info-data/INFO to screens/InfoDetailScreen,
-  but I cannot get this to work. I am able to pass catId, but nothing else. Not sure what I am doing wrong.
-  
-2: When you click on the main vertical flatlist (example: Dining) it will open a sub Category. I also want this to open a horizontal flatlist at the top like in the step above. I think this data needs to be part of the JSON for each sub-category (example: Dining would also have the information for the circle items in horizontal flatlist——Attractions would have the circle items for that horizontal flatlist.
-  I have not worked on this yet. I am trying to decide if this will take a new JSON or if the information can be added to the business-data file.
-  
-3: I successfully built the props going from CategoriesScreen to SubCategoriesScreen to BusinessListScreen and finally BusinessDetailScreen,
-  but I have tried to build it again and I cannot do it. My big problem is that I do not completely understand how to pass and receive the props.
+Click through to a business (example: Dining, Breakfast, Amigos).
+Click the heart in the upper right corner of header.
+This will take you to screens/FavoritesEditScreen.
+
+Note: Right now I can not get the image and business name to pass through to this screen (still learning to pass props).
+
+NOTE: Clicking on the heart also adds a business to the FavoritesScreen (click heart in the bottom tab bar). But I also
+need the business to be added to a horizontal flatlist based on the category the user was in when added
+(example: If the user was in Breakfast, then a breakfast flatlist would be created).
+
+Here's what I would like to happen at this screen.
+1: The user can add comments about this business that will be saved in their phone memory (using Async storage?).
+2: If they click save, he user will return to the business screen where they will see their comments.
+3: If they click delete it will remove the business from favorites.
+4: If the user is in the Favorites screen that lists all favorites, they can click "Add/change comments" 
+and will be taken back to the FavoritesEditScreen where they can change comments, Go to the business screen, or
+delete it from from favorites.
+
+If you feel there is anything wrong or confusing with the user interface of this, input is always appreciated.

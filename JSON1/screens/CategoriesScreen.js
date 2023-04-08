@@ -3,7 +3,7 @@ import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native
 import CategoriesCard from '../components/CategoriesCard'
 import InfoCard from '../components/InfoCard';
 import MapChickBanner from '../components/MapChickBanner'
-import { CATEGORIES } from '../data/business-data'
+import { CATEGORIES, CATEGORIESDATA } from '../data/business-data'
 import { CATEGORIESINFO } from '../data/dummy-info-data';
 import Colors from '../constants/Colors'
 import {DrawerActions} from "@react-navigation/routers";
@@ -13,8 +13,12 @@ function CategoriesScreen({ navigation }) {
   
   function renderCategoriesCard(itemData) {
     function pressHandler() {
-      navigation.navigate('SubCategoriesScreen', {
+      console.log(itemData);
+      // return
+      // in case you want to pass the entire item, simply pass itemdata as a prop and get it in route.params on detail screen as we get other props
+      navigation.navigate('SubCategoriesScreen', { //  you can pass entire obj or each item separately in navigation as props
         categoryId: itemData.item.id,
+        categoryInfoData: itemData.item.categoryInfoData
       })
     }
     return (
@@ -32,6 +36,8 @@ function CategoriesScreen({ navigation }) {
     function pressHandler() {
       navigation.navigate('InfoDetailScreen', {
         categoryId: itemData.item.id,
+        title: itemData.item.title,
+        imageUrl: itemData.item.imageUrl
         }
       );
     }
@@ -71,7 +77,8 @@ function CategoriesScreen({ navigation }) {
 
       
       <FlatList
-        data={CATEGORIES}
+        // data={CATEGORIES}
+        data={CATEGORIESDATA} // Passed new array with category info array for circles items in each category 
         keyExtractor={(item) => item.id}
         renderItem={renderCategoriesCard}
         ListHeaderComponent={Header}

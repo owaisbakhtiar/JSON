@@ -8,8 +8,9 @@ import { CATEGORIESINFO } from '../data/dummy-info-data';
 
 function SubCategoriesScreen({ navigation, route }) {
 
-
+  // to get the items on details screen you can use route.params with prop name 
   const catId = route.params.categoryId;
+  const categoryInfoData = route.params.categoryInfoData;
 
  
     const displaySubCategories = SUBCATEGORIES.filter((catItem) => {
@@ -65,7 +66,8 @@ function SubCategoriesScreen({ navigation, route }) {
       <FlatList
       style={{ marginBottom: 5 }}
       horizontal
-      data={CATEGORIESINFO}
+      data={categoryInfoData}
+      // data={CATEGORIESINFO}
       keyExtractor={(item) => item.id}
       renderItem={renderCategoryInfoItem}
     />

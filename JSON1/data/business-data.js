@@ -1,7 +1,29 @@
 import Category from '../models/category';
+import CategoryInfo from '../models/categoryInfo';
 import SubCategory from '../models/subCategory';
 import Business from '../models/business';
 
+const CATEGORIESINFO = [
+  new CategoryInfo('01', 'Info 1', 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg'),
+  new CategoryInfo('02', 'Info 2', 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg'),
+  new CategoryInfo('03', 'Info 3', 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg'),
+  new CategoryInfo('04', 'Info 4', 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg')
+];
+// Created new array for categories and added category info to each category so that each item has its own category info section
+export const CATEGORIESDATA = [
+  { id: "01", categoryTitle: "Dining", count: "204", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "02", categoryTitle: "Drinks", count: "213", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "03", categoryTitle: "The Beach", count: "98", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "04", categoryTitle: "Attractions", count: "241", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "05", categoryTitle: "Tours", count: "205", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "06", categoryTitle: "Self-guided tours", count: "3", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "07", categoryTitle: "Shopping", count: "198", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "08", categoryTitle: "Medical & emergency", count: "95", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "09", categoryTitle: "Transportation", count: "103", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "10", categoryTitle: "Massage, spa, gym", count: "456", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "11", categoryTitle: "Accomodations", count: "352", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+  { id: "12", categoryTitle: "Streets", count: "185", imageUrl: "https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg", categoryInfoData: CATEGORIESINFO },
+];
 export const CATEGORIES = [
   new Category('01', 'Dining', '204', 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg'),
   new Category('02', 'Drinks', '213', 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg'),
